@@ -1,0 +1,22 @@
+<p>home works!</p>
+
+<div *ngIf="nameData.length > 0">
+  <ul>
+    <li *ngFor="let name of nameData">
+      {{name | uppercase}}
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let email of emailData">
+      {{email}}
+    </li>
+  </ul>
+</div>
+
+
+<p>Today's date: {{ date | date }}</p>
+<p>Today's date: {{ date | date:'dd-MM-yyyy HH:mm' }}</p>
+<p>Uppercase: {{ 'hello' | uppercase }}</p>
+<p>Lowercase: {{ 'HELLO' | lowercase }}</p>
+<p>Currency: {{ amount | currency }}</p>
+<p>Percentage: {{ 0.25 | percent }}</p>
