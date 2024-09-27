@@ -1,0 +1,150 @@
+<!-- Angular Binding -->
+
+<!-- <div>
+  {{title}}
+</div>
+
+<div>
+  <img [src]="imageUrl" alt="Angular Logo">
+</div>
+
+<div>
+  <button (click)="onClick()">Click Me</button>
+</div>
+
+<br>
+
+<div>
+  <input [(ngModel)]="name" placeholder="Enter your name">
+  <p>Hello, {{ name }}!</p>
+</div> -->
+
+
+
+
+
+<!-- <div style="display: flex; gap: 20%; width: 100%;" >
+  <div style="height: 50%; width: 50%; background-color: red; text-align: center; border-radius: 10px;">
+    <app-home></app-home>
+  </div>
+  <div style="height: 50%; width: 50%; background-color: green; text-align: center; border-radius: 10px;">
+    <app-product></app-product>
+  </div>
+  <div style="height: 50%; width: 50%; background-color: blueviolet; text-align: center; border-radius: 10px;">
+    <app-resource></app-resource>
+  </div>
+  <div style="height: 50%; width: 50%; background-color: yellow; text-align: center; border-radius: 10px;">
+    <app-contact></app-contact>
+  </div>
+</div> -->
+
+
+<!-- Angular Routing -->
+
+<!-- <h1>Routing</h1>
+<h2>Liks of Website</h2>
+<ul>
+  <li>
+    <a routerLink="home">Home</a>
+  </li>
+  <li>
+    <a routerLink="product">Product</a>
+  </li>
+  <a routerLink="product/1">Product 1</a>
+  <br>
+  <a routerLink="product/2">Product 2</a>
+  <br>
+  <a routerLink="product/3">Product 3</a>
+  <br>
+  <a routerLink="product/4">Product 4</a>
+  <br>
+  <a routerLink="product/5">Product 5</a>
+  <br>
+  <a routerLink="product/6">Product 6</a>
+  <li>
+    <a routerLink="resources">Resources</a>
+  </li>
+  <li>
+    <a routerLink="contact">Contact</a>
+  </li>
+  <li>
+    <a routerLink="register">Register</a>
+  </li>
+  <a routerLink="register/login">Login</a>
+  <br>
+  <a routerLink="register/auth">Auth</a>
+</ul> -->
+
+
+<!-- Angular Lazy Loading -->
+
+<!-- <h1>Angular Lazy Loading</h1>
+<ul>
+  <li>
+    <a routerLink="admin/login">Login</a>
+  </li>
+  <li>
+    <a routerLink="admin/auth">Auth</a>
+  </li>
+</ul> -->
+
+<!-- <h2>Angular Template Driven Form</h2>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div>
+    <label for="name">Name: </label>
+    <input id="name" name="name" ngModel required />
+  </div>
+<br>
+  <div>
+    <label for="email">Email: </label>
+    <input id="email" name="email" type="email" ngModel required />
+  </div>
+
+<br>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Angular Reactive Form</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmitData()">
+  <div>
+    <label for="name">Name: </label>
+    <input id="name" formControlName="name" />
+    <div style="color: red;" *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+      Name is required.
+    </div>
+  </div>
+<br>
+  <div>
+    <label for="email">Email: </label>
+    <input id="email" type="email" formControlName="email" />
+    <div style="color: red;" *ngIf="myForm.controls['email'].invalid && myForm.controls['email'].touched">
+      Enter a valid email.
+    </div>
+  </div>
+<br>
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+
+
+<!-- <router-outlet></router-outlet> -->
